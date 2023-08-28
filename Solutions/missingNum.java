@@ -11,6 +11,6 @@ class Solution {
             sumArr+=nums[i];
         }
         int ans=sumArr-sum;
-        return (int)ans;
+        return ans;
 	}
 }
