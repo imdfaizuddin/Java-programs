@@ -1,6 +1,6 @@
 public class iceCReam2 {
     public static int findIceCreams(int n, int[] p) {
-		// Your code goes here
+		
         int max=0;
         int max2=0;
         int q[] =  new int[p.length-1];
