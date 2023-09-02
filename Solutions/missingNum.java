@@ -3,7 +3,7 @@ O(n) solution
 */
 class Solution {
 	public int findDuplicate(int[] nums) {
-		// Your code goes here
+		
         int n=nums.length-1;
         int sum= (n*(n+1))/2;
         int sumArr=0;
