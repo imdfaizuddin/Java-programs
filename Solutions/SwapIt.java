@@ -3,7 +3,6 @@ Given two integers, write a function to swap them without using a temporary vari
 */
 class Solution {
 	public int[] canSort(int a, int b) {
-		
 		a=a+b;
 		b=a-b;
 		a=a-b;
