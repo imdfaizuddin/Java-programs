@@ -18,7 +18,7 @@ class Solution {
         ListNode curr=head;
         ListNode next;
         while(curr != null){
-            
+            //4 steps to reverse a linked list
             next=curr.next;
             curr.next=prev;
             prev=curr;
