@@ -13,10 +13,12 @@ Reverse Linked List o(n)
  */
 class Solution {
     public ListNode reverseList(ListNode head) {
+        //to reverse a linked list 3 variables
          ListNode prev= null;
         ListNode curr=head;
         ListNode next;
         while(curr != null){
+            
             next=curr.next;
             curr.next=prev;
             prev=curr;
