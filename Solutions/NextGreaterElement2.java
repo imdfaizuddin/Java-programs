@@ -19,6 +19,7 @@ class Solution {
           int n= arr.length;
           int ans[] = new int[n];
         Stack <Integer> stk= new Stack <>();
+        // running the loop backwards for 2times of the array
         for(int i=2*n-1;i>=0;i--){
             //removing the smaller elements from the stack
             while(!stk.isEmpty() && stk.peek() <= arr[i%n]){
