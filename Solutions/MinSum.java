@@ -6,6 +6,7 @@ class Solution {
 		// Your code goes here
         int arr[] = new int[4];
         int count=0;
+		//adding all the digits to an array 
         while(num!=0){
             int i=num%10;
             arr[count]=i;
