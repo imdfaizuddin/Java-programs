@@ -76,3 +76,55 @@ class Solution {
         }
     }
 }
+
+//  Optimized solution
+function canWePlace (stalls, dist , cows){
+        let count = 1;
+        let last = stalls[0];
+        for(let curr of stalls){
+            if(curr - last >= dist){
+                count++;
+                last = curr;
+            }
+            
+        }
+        
+        if(count >= cows){
+                return true;
+            }else{
+                return false;
+            }
+    }
+
+class Solution {
+    //Function to solve the problem.
+    
+    solve(n, k, stalls) {
+        //your code here
+        stalls.sort(function(a,b){return a-b});
+        let m= stalls.length;
+        let max = stalls[m-1];
+        let min = stalls[0];
+        // for( let i =1 ; i<=(max-min); i++){
+        //     if(canWePlace(stalls, i , k)== true){
+        //         continue;
+        //     }else{
+        //         return i-1;
+        //     }
+        // }
+        let ans = 0;
+        let low = 1;
+        let high = max-min;
+        while(low <= high){
+            let mid = Math.floor((low+high)/2);
+            if(canWePlace(stalls, mid, k)== true){
+                ans = mid;
+                low = mid+1;
+                // continue;
+            }else{
+                high = mid-1;
+            }
+        }
+        return ans;
+    }
+} 
