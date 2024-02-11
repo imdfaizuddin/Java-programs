@@ -1,0 +1,23 @@
+import java.util.*;
+public class Swap2Numbers {
+    public static void swap (ArrayList<Integer> list, int idx1, int idx2){
+        int temp = list.get(1);
+        list.set(idx1, list.get(3));
+        list.set(idx2, temp);
+        // System.out.println(list);
+    }
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        list.add(2);
+        list.add(5);
+        list.add(6);
+        list.add(8);
+        list.add(7);
+        // Swap index 1 and 3;
+        int idx1 = 1 , idx2 = 3;
+        System.out.println(list);
+        swap(list, idx1, idx2);
+        System.out.println(list);
+    }
+}
