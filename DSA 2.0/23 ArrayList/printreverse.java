@@ -12,7 +12,7 @@ public class printreverse {
         System.out.println(list);
 
         for(int i= list.size()-1 ; i>=0 ; i--){
-            System.out.print(list.get(i)+ " " + Integer.parseInt("2"));
+            System.out.print(list.get(i)+ " ");
         }
     }
 }
