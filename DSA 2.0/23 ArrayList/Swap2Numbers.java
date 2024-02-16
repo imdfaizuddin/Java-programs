@@ -1,8 +1,8 @@
 import java.util.*;
 public class Swap2Numbers {
     public static void swap (ArrayList<Integer> list, int idx1, int idx2){
-        int temp = list.get(1);
-        list.set(idx1, list.get(3));
+        int temp = list.get(idx1);
+        list.set(idx1, list.get(idx2));
         list.set(idx2, temp);
         // System.out.println(list);
     }
