@@ -167,3 +167,66 @@ public class Solution{
         }
     }
 }
+
+// --------------------------------------------------------------------------------------------------------------------------------------
+from sys import *
+from collections import *
+from math import *
+from typing import List
+
+class Stack:
+
+    def __init__(self, n: int):
+        # Write your code here
+        self.n = n
+        self.arr = [0]*n
+        self.up = -1
+        pass
+
+    def push(self, num: int):
+        # Write your code here
+        # print("push",self.top, self.n)
+        if self.isFull() == 1:
+            return
+        else:
+            self.up += 1
+            self.arr[self.up] = num
+            # print("after append",self.top)
+        pass
+
+    def pop(self) -> int:
+        # Write your code here
+        if self.up != -1:
+            temp = self.arr[self.up]
+            self.up -= 1
+            return temp
+        else:
+            return -1
+        pass
+
+    def top(self) -> int:
+        # Write your code here
+        if self.up != -1:
+            # print("top",self.up)
+            return self.arr[self.up]
+        else:
+            # print("top else",self.up)
+            return -1
+        pass
+
+    def isEmpty(self) -> int:
+        # Write your code here
+        # print(self.top)
+        if self.up == -1:
+            return 1
+        else:
+            return 0
+        pass
+
+    def isFull(self) -> int:
+        # Write your code here
+        if self.up == self.n-1:
+            return 1
+        else:
+            return 0
+        pass
