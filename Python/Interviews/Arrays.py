@@ -22,6 +22,20 @@ def removeDuplicates(nums:list)-> list:
 
 l = [1,2,1,2,3,5,5,3,7,7,1,3]
 
-print(frequencyOfElements(l))
-print(removeDuplicates(l))
+# print(frequencyOfElements(l))
+# print(removeDuplicates(l))
+def noOfElements(nums:list)-> dict:
+    freq = {}
+    for item in nums:
+        if item in freq:
+            freq[item] += 1
+        else:
+            freq[item] = 1
+    return freq
 
+def removeDup(nums:list)-> list:
+    no_dup = list(set(nums))
+    return no_dup
+
+print(noOfElements(l))
+print(removeDup(l))
