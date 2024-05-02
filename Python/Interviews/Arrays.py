@@ -24,6 +24,7 @@ l = [1,2,1,2,3,5,5,3,7,7,1,3]
 
 # print(frequencyOfElements(l))
 # print(removeDuplicates(l))
+# Practice
 def noOfElements(nums:list)-> dict:
     freq = {}
     for item in nums:
@@ -34,8 +35,9 @@ def noOfElements(nums:list)-> dict:
     return freq
 
 def removeDup(nums:list)-> list:
-    no_dup = list(set(nums))
-    return no_dup
+    ans = list(set(nums))
+    return ans
+    
 
 print(noOfElements(l))
 print(removeDup(l))
