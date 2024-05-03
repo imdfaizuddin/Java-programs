@@ -16,3 +16,6 @@ print(hello.lower())    #hello world
 print(hello.capitalize())   #Hello world
 print(hello.count("l")) # 1 counts the number of 'l'
 print(hello.lower().count("l")) # 3 converts the string into lowercase then counts the no. of "l"
+
+# and > or > not precedence
+print( not(False or False and False))
