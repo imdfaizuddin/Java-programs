@@ -34,9 +34,10 @@ def noOfElements(nums:list)-> dict:
             d[item] = 1
     return d
 
-# def removeDup(nums:list)-> list:
+def removeDup(nums:list)-> list:
+    return list(set(nums))
     
     
 
 print(noOfElements(l))
-# print(removeDup(l))
+print(removeDup(l))
