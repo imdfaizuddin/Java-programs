@@ -63,4 +63,22 @@ def while_loop():
         if i == 7:
             break
 
-while_loop()
+# while_loop()
+
+# Slice operator works on 'string' 'tuple' & 'list'
+# sliced = [start:stop:step]
+def slice_operator():
+    x = [0,1,2,3,4,5,6,7,8,9]
+    y = ['hi', 'hello', 'goodbye', 'cya' , 'sure']
+    s = "hello"
+
+    sliced = x[0:4:2]   # [0,2]
+    print(x[:6])    # [0, 1, 2, 3, 4, 5] start at first index end at 6 index
+    print(x[2:])    # [2, 3, 4, 5, 6, 7, 8, 9] start at 2 end at last index
+    print(x[2:7])   # [2, 3, 4, 5, 6]   start at 2 end at 7 index
+    print(x[::2])   # [0, 2, 4, 6, 8] like for loop iterates 2 steps at a time
+    print(x[::-1])  # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] starts at fist ends at last but iterates in opposite direction and reverses the item
+    print(s[::-1])  # olleh - starts at fist ends at last but iterates in opposite direction and reverses the item
+    print(sliced)
+
+slice_operator()
