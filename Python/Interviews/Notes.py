@@ -45,10 +45,22 @@ def for_loop(arr, x):
         for i, val in enumerate(arrx):   # i = index , element = values
             print(i, val)
 
-arr = [0]*3
-arr[0] = int(input("start: "))
-arr[1] = int(input("stop: "))
-arr[2] = int(input("step: "))
-x = int(input("x: "))
-for_loop(arr,x)
+# arr = [0]*3
+# arr[0] = int(input("start: "))
+# arr[1] = int(input("stop: "))
+# arr[2] = int(input("step: "))
+# x = int(input("x: "))
+# for_loop(arr,x)
 
+def while_loop():
+    i = 0
+    while True:
+        if i == 5:
+            i += 1  #else infinite loop because i always == 5
+            continue
+        print(i)
+        i += 1
+        if i == 7:
+            break
+
+while_loop()
