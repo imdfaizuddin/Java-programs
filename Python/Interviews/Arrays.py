@@ -35,9 +35,17 @@ def noOfElements(nums:list)-> dict:
     return d
 
 def removeDup(nums:list)-> list:
-    return list(set(nums))
+    ans = []
+    for item in nums:
+        if item in ans:
+            continue
+        else:
+            ans.append(item)
+        
+    return ans
     
     
 
 print(noOfElements(l))
 print(removeDup(l))
+print(removeDuplicates(l))
