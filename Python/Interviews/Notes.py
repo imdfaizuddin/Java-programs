@@ -77,8 +77,23 @@ def slice_operator():
     print(x[2:])    # [2, 3, 4, 5, 6, 7, 8, 9] start at 2 end at last index
     print(x[2:7])   # [2, 3, 4, 5, 6]   start at 2 end at 7 index
     print(x[::2])   # [0, 2, 4, 6, 8] like for loop iterates 2 steps at a time
+    print(x[4:2:-1])    # [4, 3] starts at 4 ends at 2 takes -1 steps
     print(x[::-1])  # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] starts at fist ends at last but iterates in opposite direction and reverses the item
     print(s[::-1])  # olleh - starts at fist ends at last but iterates in opposite direction and reverses the item
     print(sliced)
 
-slice_operator()
+# slice_operator()
+
+'''set is an unordered unique collection of elements'''
+def set_datatype():
+    x = set()       #for empty set
+    s = {4,32,2,2}  #set literal
+    s.add(5)
+    s.remove(4)
+    print(s)
+    print(2 in s)   #constant time returns boolean
+    print(7 in s)   #constant time returns boolean
+    s2 = [4,32,2,2]
+    print(2 in s2)  #not in constant time takes much longer comparatively
+
+set_datatype()
