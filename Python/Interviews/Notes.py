@@ -28,12 +28,12 @@ def take_input():
     name = input("Name: ")
     print(name)
 
-# for i in range(start, stop, step) start & step are optional
-# for i in arr: // this iterates over all items in a list
+'''for i in range(start, stop, step) start & step are optional'''
+'''for i in arr:''' # this iterates over all items in a list
 def for_loop(arr, x):
     # n = int(input("n: "))
     import random
-    # arrx = [ranom.randint(0,101),random.randint(0,101),random.randint(0,101),random.randint(0,101),random.randint(0,101),]
+    # arrx = [random.randint(0,101),random.randint(0,101),random.randint(0,101),random.randint(0,101),random.randint(0,101),]
     arrx = [37,15,61,77,101]
     if x == 0:
         for i in range(arr[0],arr[1],arr[2]):
@@ -85,6 +85,7 @@ def slice_operator():
 # slice_operator()
 
 '''set is an unordered unique collection of elements'''
+'''Looking things up in sets is in constant time much faster than lists'''
 def set_datatype():
     x = set()       #for empty set
     s = {4,32,2,2}  #set literal
@@ -96,4 +97,25 @@ def set_datatype():
     s2 = [4,32,2,2]
     print(2 in s2)  #not in constant time takes much longer comparatively
 
-set_datatype()
+# set_datatype()
+
+# lambda function - one line function
+def lambda_func():
+    square = lambda x: x*x
+    sum = lambda a,b: a+b
+    print(square(5))
+    print(sum(2,3))
+
+# lambda_func()
+
+'''Counter'''
+def counter_method():
+    from collections import Counter
+    
+    print(Counter(['B','B','A','B','C','A','B','B','A','C']))
+
+    print(Counter({'A':3,'B':5, 'C':2}))
+
+    print(Counter(A=3,B=5,C=2))
+
+counter_method()
