@@ -118,4 +118,7 @@ def counter_method():
 
     print(Counter(A=3,B=5,C=2))
 
+    x = dict(Counter([1,2,5,1,3,2,1,6,5,2]))
+    print(x)
+
 counter_method()
