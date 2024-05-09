@@ -11,3 +11,8 @@ print(list(s - s2)) #First set(s) - (s2) (common elements are removed from first
 print(list(s ^ s2)) # XOR removes common elements in both sets
 # x = int(input())
 # print(type(x))
+
+s2.add(6)
+s2.remove(8)
+poped = s2.pop()
+print(s2, poped,)
