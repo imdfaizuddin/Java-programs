@@ -46,6 +46,20 @@ def removeDup(nums:list)-> list:
     
     
 
-print(noOfElements(l))
-print(removeDup(l))
-print(removeDuplicates(l))
+# print(noOfElements(l))
+# print(removeDup(l))
+# print(removeDuplicates(l))
+
+arr = [0,1,2,3,4,5]
+
+arr.append('hi')    #   [0, 1, 2, 3, 4, 5, 'hi']
+
+arr.remove(2) # [0, 1, 3, 4, 5, 'hi']
+
+arr.pop(2)  # [0, 1, 4, 5, 'hi']
+ 
+arr.insert(2,'hi')  # [0, 1, 'hi', 4, 5, 'hi']
+
+arr[0] = "first index"
+
+print(arr)
