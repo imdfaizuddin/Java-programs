@@ -99,7 +99,7 @@ def set_datatype():
 
 # set_datatype()
 
-# lambda function - one line function
+'''lambda function - one line function '''
 def lambda_func():
     square = lambda x: x*x
     sum = lambda a,b: a+b
@@ -112,13 +112,28 @@ def lambda_func():
 def counter_method():
     from collections import Counter
     
-    print(Counter(['B','B','A','B','C','A','B','B','A','C']))
+    print(Counter(['B','B','A','B','C','A','B','B','A','C']))   #   Counter({'B': 5, 'A': 3, 'C': 2})
 
-    print(Counter({'A':3,'B':5, 'C':2}))
+    print(Counter({'A':3,'B':5, 'C':2}))    #   Counter({'B': 5, 'A': 3, 'C': 2})
 
-    print(Counter(A=3,B=5,C=2))
+    print(Counter(A=3,B=5,C=2))     #   Counter({'B': 5, 'A': 3, 'C': 2})
 
-    x = dict(Counter([1,2,5,1,3,2,1,6,5,2]))
+    x = dict(Counter([1,2,5,1,3,2,1,6,5,2]))    #   {1: 3, 2: 3, 5: 2, 3: 1, 6: 1}
     print(x)
 
-counter_method()
+# counter_method()
+
+def comprehensions_exp():
+    x = [x*x for x in range(5)]
+    print(x)
+    
+    y = [[0 for x in range(5)] for x in range(3)]
+    print(y)
+    
+    z = [x for x in range(100) if x%5 == 0]
+    print(z)
+    
+    dic = {i:0 for i in range(100) if i%5 ==0 }
+    print(dic)
+
+comprehensions_exp()
