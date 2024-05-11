@@ -136,4 +136,11 @@ def comprehensions_exp():
     dic = {i:0 for i in range(100) if i%5 ==0 }
     print(dic)
 
-comprehensions_exp()
+# comprehensions_exp()
+
+def func_exp(x,y, z = None):
+    print('Run',x,y,z)  #   Run 5 6 None(when no z value is passed) # Run 5 6 7 (when z value is passed in func_exp call)
+    return x* y, x/y
+
+r1,r2 = func_exp(5,6,7)   # r1 is getting x*y return value, r2 is getting x/y value
+print("r1=",r1,"r2=",r2)    #  r1= 30 r2= 0.8333333333333334
