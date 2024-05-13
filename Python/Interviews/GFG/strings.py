@@ -16,6 +16,8 @@ def Capitalize_first_and_last_char():
 
 # Capitalize_first_and_last_char()
 
+'''Convert Second Half of the String to Uppercase'''
+
 def uppercase_half_string():
     s = 'apples'
 
@@ -38,4 +40,19 @@ def uppercase_half_string():
 
     print(ans)
 
-uppercase_half_string()
+# uppercase_half_string()
+
+'''Python program to print even length words in a string'''
+
+def even_length_words():
+    s = "i am legend alright"
+
+    arr = s.split(" ")
+    ans = ''
+    for item in arr:
+        if len(item)%2 == 0:
+            ans = ans + item + " "
+
+    print(ans)
+
+even_length_words()
