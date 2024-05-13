@@ -55,4 +55,21 @@ def even_length_words():
 
     print(ans)
 
-even_length_words()
+# even_length_words()
+
+'''Python program to check if a string has at least one letter and one number'''
+def one_letter_and_number():
+    s = 'Hello2'
+    flag_1 = False
+    flag_2 = False
+
+    for i in s.lower():
+        if i in "abcdefghijklmnopqrstuvwxyz":
+            flag_1 = True
+        if i in "0123456789":
+            flag_2 = True
+
+    print(flag_1 and flag_2)
+
+
+one_letter_and_number()
