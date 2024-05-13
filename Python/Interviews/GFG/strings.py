@@ -72,4 +72,23 @@ def one_letter_and_number():
     print(flag_1 and flag_2)
 
 
-one_letter_and_number()
+# one_letter_and_number()
+
+'''Python Program to Accept the Strings Which Contains all Vowels'''
+
+def string_all_vovels():
+    s1 = "geeksforgeeks"
+    s2 = "ABeeIghiObhkUul"
+
+    v = set("aeiou")
+    st = set({})
+
+    for char in s2.lower():
+        if char in v:
+            st.add(char)
+        else:
+            continue
+    
+    print(len(v) == len(st))
+
+string_all_vovels()
