@@ -14,4 +14,28 @@ def Capitalize_first_and_last_char():
     ans = " ".join(arr)
     print(ans)
 
-Capitalize_first_and_last_char()
+# Capitalize_first_and_last_char()
+
+def uppercase_half_string():
+    s = 'apples'
+
+    half = len(s)//2
+
+    j = half
+
+    first = s[:half]
+    shalf = s[half:].upper()
+    # print(shalf)  #to check second half
+
+    s = first + shalf
+    print(s)
+    ans = ''
+    for i in range(len(s)):
+        if i >= half:
+            ans = ans + s[i].upper()
+        else:
+            ans = ans + s[i]
+
+    print(ans)
+
+uppercase_half_string()
