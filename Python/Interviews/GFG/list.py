@@ -26,4 +26,28 @@ def remove_empty_list():
         
     print(test_list)    # [5, 6, 3, 9]
 
-remove_empty_list()
+# remove_empty_list()
+
+'''Convert List to List of dictionaries'''
+def list_of_list_to_dict():
+    test_list = ['Gfg', 3, 'is', 8]
+    key_list = ['name', 'id']
+
+    # [{‘name’: ‘Gfg’, ‘id’: 3}, {‘name’: ‘is’, ‘id’: 8}] 
+
+    ans = []
+
+    i = 0
+    j = 1
+    # print(test_list,key_list)
+    while j < len(test_list):
+        f = {}
+        f[key_list[0]] = test_list[i]
+        f[key_list[1]] = test_list[j]
+        ans.append(f)
+        i+=2
+        j+=2
+        
+    print(ans)  # [{'name': 'Gfg', 'id': 3}, {'name': 'is', 'id': 8}]
+
+list_of_list_to_dict()
