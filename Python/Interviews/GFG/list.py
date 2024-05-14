@@ -50,4 +50,22 @@ def list_of_list_to_dict():
         
     print(ans)  # [{'name': 'Gfg', 'id': 3}, {'name': 'is', 'id': 8}]
 
-list_of_list_to_dict()
+# list_of_list_to_dict()
+
+'''Split String of list on K character'''
+def split_on_k():
+    test_list =['Gfg is best', 'for Geeks', 'Preparing']
+    # ['Gfg', 'is', 'best', 'for', 'Geeks', 'Preparing']
+    res = []
+    k = " "
+    for item in test_list:
+        s = item.split(k)
+        res.extend(s)
+
+    print(res)
+    '''Using String methods .join() and .split()'''
+    s = test_list
+    res = ' '.join(s)
+    print(res.split(k))
+
+split_on_k()
