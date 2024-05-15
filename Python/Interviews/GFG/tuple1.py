@@ -16,4 +16,24 @@ def extract_tup_having_k_ele():
 
     print(ans)
 
-extract_tup_having_k_ele()
+# extract_tup_having_k_ele()
+
+'''Extract Symmetric Tuples'''
+def symmetric_tuple():
+    t_list = [(6, 7), (2, 3), (7, 5),(6, 5),(5, 7)] # {(7, 5)}
+    # print(set(t_list))
+    # print(t_list[0] == t_list[2])
+
+    from collections import Counter
+
+    # print(Counter(t_list[0])==Counter(t_list[2]))
+    n = len(t_list)
+    ans = set()
+    for i in range(n):
+        for j in range(i+1,n):
+            if Counter(t_list[i])==Counter(t_list[j]):
+                ans.add(t_list[i])
+            
+    print(ans)  #{(7, 5)}
+
+symmetric_tuple()  
