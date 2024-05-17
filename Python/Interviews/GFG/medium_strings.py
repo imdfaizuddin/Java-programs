@@ -35,4 +35,30 @@ def word_position():
             
     print(ans+1)
 
-word_position()
+# word_position()
+
+'''Consecutive characters frequency'''
+
+def consecutive_char_freq():
+    text = 'geekksforgggeeks'   # output- [1, 2, 2, 1, 1, 1, 1, 3, 2, 1, 1]
+    n = len(text)
+    ans = [0]*n
+    ar = []
+    val = text[0]
+    count = 1
+    i = 1
+    j = 0
+    while i < n:
+        if text[i] == text[i-1]:
+            count += 1
+        else:
+            ar.append(count)
+            ans[j] = count
+            j += 1
+            count = 1
+        i += 1
+    ans[j] = count
+    ar.append(count)
+    print(ans,ar)   # [1, 2, 2, 1, 1, 1, 1, 3, 2, 1, 1, 0, 0, 0, 0, 0] [1, 2, 2, 1, 1, 1, 1, 3, 2, 1, 1]
+
+consecutive_char_freq()
