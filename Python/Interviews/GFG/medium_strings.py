@@ -61,4 +61,37 @@ def consecutive_char_freq():
     ar.append(count)
     print(ans,ar)   # [1, 2, 2, 1, 1, 1, 1, 3, 2, 1, 1, 0, 0, 0, 0, 0] [1, 2, 2, 1, 1, 1, 1, 3, 2, 1, 1]
 
-consecutive_char_freq()
+# consecutive_char_freq()
+
+'''String slicing in Python to Rotate a String'''
+
+def rotate_str_by_k():
+    s = "qwertyu"
+    # Left rotation : "ertyuqw"
+    # Right rotation : "yuqwert"
+    s = "GeeksforGeeks"
+    # Left Rotation  : "eksforGeeksGe" 
+    # Right Rotation : "ksGeeksforGee"  
+
+    d = 2
+
+    def rotate_left(s,d):
+        n = len(s)
+        res = [0]*n
+        for i in range(len(s)):
+            res[(i-d)%n] = s[i]
+            
+        return ''.join(res)
+        
+    def rotate_right(s,d):
+        n = len(s)
+        res = [0]*n
+        for i in range(len(s)):
+            res[(i+d)%n] = s[i]
+            
+        return ''.join(res)
+        
+    print(rotate_left(s,d))
+    print(rotate_right(s,d))
+
+rotate_str_by_k()
