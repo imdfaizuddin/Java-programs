@@ -60,6 +60,4 @@ arr.pop(2)  # [0, 1, 4, 5, 'hi']
  
 arr.insert(2,'hi')  # [0, 1, 'hi', 4, 5, 'hi']
 
-arr[0] = "first index"
-
-print(arr)
+arr[0] = "first index"  #   ['first index', 1, 'hi', 4, 5, 'hi']
