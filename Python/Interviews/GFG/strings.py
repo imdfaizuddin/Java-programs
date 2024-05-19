@@ -113,4 +113,25 @@ def no_of_matching_char():
 
     print(count)    # 5
 
-no_of_matching_char()
+# no_of_matching_char()
+
+'''String Compression IMPORTANT!'''
+
+def string_compress():
+    s = 'aabcccc'   #a2b1c4
+    n = len(s)
+    i = 1
+    count = 1
+    res = ''
+    while i < n:
+        if s[i] == s[i-1]:
+            count +=1
+        else:
+            res = res + s[i-1] + str(count)
+            count = 1
+        i += 1
+
+    res = res + s[i-1] + str(count)
+    print(res)  
+
+string_compress()
