@@ -91,4 +91,26 @@ def string_all_vovels():
     
     print(len(v) == len(st))
 
-string_all_vovels()
+# string_all_vovels()
+
+'''Count the Number of matching characters in a pair of string'''
+
+def no_of_matching_char():
+    str1 = 'abcdef'
+    str2 = 'defghia'
+    str2 = 'aabcddekll12@'
+    str1 = 'bb2211@55k'
+    s = set()
+    count = 0
+
+    for char in str1:
+        if char in s:
+            continue
+        else:
+            if char in str2:
+                s.add(char)
+                count +=1
+
+    print(count)    # 5
+
+no_of_matching_char()
