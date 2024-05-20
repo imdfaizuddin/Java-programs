@@ -46,4 +46,24 @@ def sort_by_keys():
         
     print(sorted_dict)
 
-sort_by_keys()
+# sort_by_keys()
+
+'''dictionary with keys having multiple inputs'''
+
+def keys_with_multiple_inputs():
+    places = {("19.07'53.2", "72.54'51.0"):"Mumbai", 
+          ("28.33'34.1", "77.06'16.6"):"Delhi"}
+
+
+    lat = []
+    lo = []
+    p = []
+
+    for i,j in places.items():
+        lat.append(i[0])
+        lo.append(i[1])
+        p.append(j)
+        
+    print(lat,lo,p)     #["19.07'53.2", "28.33'34.1"] ["72.54'51.0", "77.06'16.6"] ['Mumbai', 'Delhi']
+
+keys_with_multiple_inputs()
