@@ -94,4 +94,48 @@ def rotate_str_by_k():
     print(rotate_left(s,d))
     print(rotate_right(s,d))
 
-rotate_str_by_k()
+# rotate_str_by_k()
+
+'''Least & most occurring char in a string'''
+def least_and_most():
+    s = 'GeeksfggorGeeks'
+    s = 'Mississippi'   #least occuring char: ' m ' most occuring char:  i
+    s = s.lower()
+
+    freq = dict()
+
+    for char in s:
+        freq[char] = freq.get(char,0)+1
+        min = freq[s[0]]
+        max = freq[s[0]]
+        val = s[0]
+        val2 = s[0]
+    for key in freq:
+        if freq[key] < min:
+            val = key
+            min = freq[key]
+        if freq[key] > max or (freq[key] == max and val2 > key):
+            val2 = key
+            max = freq[key]
+    print("least occuring char: '",val, "' most occuring char: ", val2)
+    print(freq)
+
+# least_and_most()
+
+''' Replace multiple words with K'''
+
+def replace_words_with_k():
+    test_str = 'Geeksforgeeks is best for geeks and CS'     #Geeksforgeeks is gfg gfg geeks and gfg
+    word_list = ["best", 'CS', 'for']
+    repl_wrd = 'gfg'
+
+    arr = test_str.split(" ")
+
+    for item in arr:
+        if item in word_list:
+            idx = arr.index(item)
+            arr[idx] = repl_wrd
+        
+    print(' '.join(arr))
+
+replace_words_with_k()
