@@ -4,6 +4,10 @@ def ord_func():
     print(ord("Z")) #output 90
     print(ord("a")) #output 97
     print(ord("z")) #output 122
+    print(chr(97))  #output a
+    print(chr(122)) #output z
+ord_func()
+
 def print_nextline():
     print("Hello", "end", 87, True, end="\n") #end="\n" == print in nextline
     print("next line")
@@ -124,16 +128,16 @@ def counter_method():
 # counter_method()
 
 def comprehensions_exp():
-    x = [x*x for x in range(5)]
+    x = [x*x for x in range(5)]     #   [0, 1, 4, 9, 16]    
     print(x)
     
-    y = [[0 for x in range(5)] for x in range(3)]
+    y = [[0 for x in range(5)] for x in range(3)]   #   [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]
     print(y)
     
-    z = [x for x in range(100) if x%5 == 0]
+    z = [x for x in range(100) if x%5 == 0]   #  [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]
     print(z)
     
-    dic = {i:0 for i in range(100) if i%5 ==0 }
+    dic = {i:0 for i in range(100) if i%5 ==0 } # {0: 0, 5: 0, 10: 0, 15: 0, 20: 0, 25: 0, 30: 0, 35: 0, 40: 0, 45: 0, 50: 0, 55: 0, 60: 0, 65: 0, 70: 0, 75: 0, 80: 0, 85: 0, 90: 0, 95: 0}
     print(dic)
 
 # comprehensions_exp()
@@ -142,5 +146,5 @@ def func_exp(x,y, z = None):
     print('Run',x,y,z)  #   Run 5 6 None(when no z value is passed) # Run 5 6 7 (when z value is passed in func_exp call)
     return x* y, x/y
 
-r1,r2 = func_exp(5,6,7)   # r1 is getting x*y return value, r2 is getting x/y value
-print("r1=",r1,"r2=",r2)    #  r1= 30 r2= 0.8333333333333334
+# r1,r2 = func_exp(5,6,7)   # r1 is getting x*y return value, r2 is getting x/y value
+# print("r1=",r1,"r2=",r2)    #  r1= 30 r2= 0.8333333333333334
