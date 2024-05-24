@@ -9,4 +9,28 @@ def check_prime():
             return False
     return True
 
-print(check_prime())
+
+# print(check_prime())
+
+'''Fibonacci sequence'''
+
+def fibo():
+    n = 10
+    ans = [0,1]
+    fib = 0
+    if n == 1:
+        return ans[0]
+    if n == 2:
+        return [0]
+    first = 0
+    second = 1
+    i = 3
+    while i <= n:
+        fib = first + second
+        ans.append(fib)
+        first = second
+        second = fib
+        i+=1
+    return fib,ans
+    
+print(fibo())
