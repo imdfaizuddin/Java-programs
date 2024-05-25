@@ -33,4 +33,27 @@ def fibo():
         i+=1
     return fib,ans
     
-print(fibo())
+# print(fibo())
+
+'''Sum of Digits of a Number'''
+def sum_of_digits():
+    n = 41515
+    s = str(n)
+    sum = 0
+    for i in s:
+        i = int(i)
+        sum += i
+        
+    print(sum)
+    sum2 = 0
+    temp = n
+    rev = 0
+    while temp:
+        r = temp % 10
+        rev = rev*10 + r
+        sum2 += r
+        temp = temp//10
+        
+    print(sum2, rev)
+
+sum_of_digits()
