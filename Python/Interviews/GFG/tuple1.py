@@ -36,4 +36,21 @@ def symmetric_tuple():
             
     print(ans)  #{(7, 5)}
 
-symmetric_tuple()  
+# symmetric_tuple()  
+
+''''''
+def remove_dup():
+    test_tup = ([4, 7, 8], [1, 2, 3], [4, 7, 8], [9, 10, 11], [1, 2, 3])
+
+    ar = list(test_tup)
+    ans = []
+    for item in ar:
+        if item in ans:
+            continue
+        else:
+            ans.append(item)
+            
+
+    print(tuple(ans))
+
+remove_dup()
