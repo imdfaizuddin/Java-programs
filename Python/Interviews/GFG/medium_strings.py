@@ -138,4 +138,38 @@ def replace_words_with_k():
         
     print(' '.join(arr))
 
-replace_words_with_k()
+# replace_words_with_k()
+
+'''Find First Unique Character'''
+
+def first_unique_char():
+    text = "lleetcode"  # t
+    n = len(text)
+
+    res = ''
+    # print(text.count('l'))
+    for i in text:
+        if text.count(i) == 1:
+            res = i
+            break
+    print(res)  
+
+    # Using dict
+    f = {}
+
+    for i in text:
+        if i in f:
+            f[i] += 1
+        else:
+            f[i] = 1
+            
+    min1 = 9999999999
+    ans = 'z'
+    for key in f:
+        if f[key] < min1 or (f[key] == min1 and key < ans):
+            min1 = f[key]
+            ans = key
+        
+    print(ans, f)   #c {'l': 2, 'e': 3, 't': 1, 'c': 1, 'o': 1, 'd': 1}
+
+first_unique_char()
