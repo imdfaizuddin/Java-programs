@@ -14,4 +14,29 @@ def pair_of_anagram():
 
     print(ans)
 
-pair_of_anagram()
+# pair_of_anagram()
+
+'''Longest Common Prefix'''
+def longest_prefix():
+    strs = ["flower", "flow", "flight"] #fl
+
+    n = min(strs, key = len)
+    n = len(n)
+    # print(n)
+    res = ''
+    flag = True
+    for i in range(n):
+        t = strs[0][i]
+        for item in strs:
+            if item[i] != t:
+                # print(t)
+                flag = False
+                break
+        if flag:
+            res += t
+        else:
+            break
+
+    print(res) 
+
+longest_prefix()
