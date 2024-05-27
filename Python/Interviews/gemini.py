@@ -1,0 +1,17 @@
+'''Print all pairs of anagrams in a given array of strings'''
+def pair_of_anagram():
+    arr = ["abc","geeksquiz", "geeksforgeeks","abcd", "forgeeksgeeks", "zuiqkeegs"] 
+    n = len(arr)    #[['geeksquiz', 'zuiqkeegs'], ['geeksforgeeks', 'forgeeksgeeks']]
+    ans = []
+
+    i = 0
+    j = 1
+    # print(sorted(arr[i]))
+    for i in range(n):
+        for j in range(i+1,n):
+            if sorted(arr[i]) == sorted(arr[j]):
+                ans.append([arr[i],arr[j]])
+
+    print(ans)
+
+pair_of_anagram()
