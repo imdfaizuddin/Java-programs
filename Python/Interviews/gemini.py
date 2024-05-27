@@ -39,4 +39,25 @@ def longest_prefix():
 
     print(res) 
 
-longest_prefix()
+# longest_prefix()
+
+
+'''Valid Parentheses '''
+def valid_parenthesis():
+    t = "[([])]"
+    t = '[()]{}{[()()]()}'
+    a = []
+    x = '()'
+    y = '[]'
+    z = '{}'
+    for i in t:
+        if i in '([{':
+            a.append(i)
+        elif i in ')]}':
+            t = a[-1] + i
+            if t == x or t == y or t==z:
+                a.pop(-1)
+                
+    print(len(a) == 0)
+
+valid_parenthesis()
