@@ -61,3 +61,22 @@ arr.pop(2)  # [0, 1, 4, 5, 'hi']
 arr.insert(2,'hi')  # [0, 1, 'hi', 4, 5, 'hi']
 
 arr[0] = "first index"  #   ['first index', 1, 'hi', 4, 5, 'hi']
+
+'''Remove Duplicate in place in sorted list'''
+
+def rem_dup():
+    l = [1,2,1,2,3,5,5,3,7,7,1,3]   # [1, 2, 3, 5, 7] {1, 2, 3, 5, 7}
+    n = len(l)
+    i = 0
+    j = 1
+    l.sort()    #[1, 1, 1, 2, 2, 3, 3, 3, 5, 5, 7, 7]
+
+    while j < n:
+        if l[j] != l[i]:
+            i += 1
+            l[i] = l[j]
+        j += 1
+    l = l[:i+1]
+    print(l, set(l))
+
+rem_dup()
