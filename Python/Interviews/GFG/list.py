@@ -69,3 +69,25 @@ def split_on_k():
     print(res.split(k))
 
 split_on_k()
+
+'''Program to print duplicates from a list of integers'''
+
+def duplicates_in_list():
+    list1 = [10, 20, 30, 20, 20, 30, 40, 50, -20, 60, 60, -20, -20]   # [20, 30, 60, -20]   or {20, -20, 30, 60}
+
+    dup = []
+    uni = []
+
+    for i in list1:
+        if i not in uni:
+            uni.append(i)
+        elif i not in dup:
+            dup.append(i)
+            
+
+    print(dup)
+    #or
+    x = filter(lambda x: list1.count(x)>1,list1)
+    print(set(x))
+
+duplicates_in_list()
