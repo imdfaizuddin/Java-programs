@@ -119,6 +119,7 @@ def no_of_matching_char():
 
 def string_compress():
     s = 'aabcccc'   #a2b1c4
+    s = 'aabcccccaaa'   #a2b1c5a3
     n = len(s)
     i = 1
     count = 1
@@ -134,4 +135,25 @@ def string_compress():
     res = res + s[i-1] + str(count)
     print(res)  
 
-string_compress()
+# string_compress()
+
+'''Python program to find uncommon words from two Strings'''
+def uncommon_words():
+    A = "Geeks for Geeks"
+    B = "Learning from Geeks for Geeks"     #['Learning', 'from'] {'from', 'Learning'}
+
+    a = A.split()
+    b = B.split()
+    # print(a,b)
+
+    if len(a)<len(b):
+        a,b = b,a
+    ans = []
+    for i in a:
+        if i not in b:
+            ans.append(i)
+    print(ans)
+
+    print(set(a) - set(b))
+
+uncommon_words()
