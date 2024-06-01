@@ -60,4 +60,28 @@ def valid_parenthesis():
                 
     print(len(a) == 0)
 
-valid_parenthesis()
+# valid_parenthesis()
+
+'''Check if Palindrome Ignoring Punctuation'''
+def palindrome_ignore_punc():
+    t = "A man, a plan, a canal: Panama"    #amanaplanacanalpanama
+    t = t.lower()
+    t2 = str()
+    for i in t:
+        if i in 'abcdefghijklmnopqrstuvwxyz':
+            t2 += i
+    print(t2)
+    print(t2 == t2[::-1])
+
+    i = 0
+    j = len(t2) - 1
+    flag = True
+    while i <= j:
+        if t2[i] != t2[j]:
+            flag = False
+            break
+        i +=1
+        j -=1
+    print(flag)
+
+palindrome_ignore_punc()
