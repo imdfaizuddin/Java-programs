@@ -84,4 +84,50 @@ def palindrome_ignore_punc():
         j -=1
     print(flag)
 
-palindrome_ignore_punc()
+# palindrome_ignore_punc()
+
+'''Encode and Decode Strings'''
+
+def encode_decode_str():
+    t = "abbcccddd"     #ab2c3d3
+    # t = 'wxyz'
+    count = 1
+    i = 1
+    res = ''
+    while i < len(t):
+        if t[i] != t[i-1]:
+            if count == 1:
+                res += t[i-1]
+            else:
+                res += t[i-1] + str(count)
+                count = 1
+        elif t[i] == t[i-1]:
+            count +=1
+        i += 1
+
+    res += t[i-1] + str(count)
+    print(res)
+
+    o = 'a1b2c3d3'  #abbcccddd
+
+    j = 0
+    k = 1
+    ans = ''
+    def extnd(s:str,n:int):
+        print(s,n)
+        ans = ''
+        i = 0
+        while i < (n):
+            ans += s
+            i += 1
+        return ans
+        
+    while k < len(o):
+        t = extnd(o[j],int(o[k]))
+        ans += t
+        j += 2
+        k +=2
+        
+    print(ans)
+
+encode_decode_str()
