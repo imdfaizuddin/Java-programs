@@ -14,3 +14,5 @@ while i<j:
         
 if ans == True:
     print("palindrome")
+    
+print(str == str[::-1])     #using slicing operator
