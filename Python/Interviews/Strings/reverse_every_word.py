@@ -12,3 +12,10 @@ def reverse_str(line):
 line = "this is my book"
 ans = reverse_str(line)
 print(ans)
+
+def rev_str_map(line):
+    ar = line.split()
+    ar1 = list(map(lambda x: x[::-1],ar))
+    print(' '.join(ar1))
+
+rev_str_map(line)
