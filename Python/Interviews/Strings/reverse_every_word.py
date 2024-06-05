@@ -19,3 +19,17 @@ def rev_str_map(line):
     print(' '.join(ar1))
 
 rev_str_map(line)
+
+def rev_str_loop(e):
+    t1 = ''
+    temp = ''
+    for i in e:
+        if i != ' ':
+            temp += i
+        else:
+            t1 += temp[::-1] + ' '
+            temp = ''
+    t1 += temp[::-1]
+    print(t1)
+
+rev_str_loop(line)
