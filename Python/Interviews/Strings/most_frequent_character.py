@@ -22,3 +22,31 @@ def most_freq_char(text):
     print(answer)
 
 most_freq_char(text)
+
+def most_and_second_most_freq():
+    s = 'mississeiepepei'
+    f = dict()
+    for char in s:
+        if char in f:
+            f[char] += 1
+        else:
+            f[char] = 1
+            
+    print(f)
+    max1 = 0
+    max2 = 0
+    val = ''
+    val2 = ''
+    for key in f:
+        
+        if f[key] > max1 or (key < val and f[key] == max1):
+            if max1 != f[key]:
+                max2 = max1
+            max1 = f[key]
+            val = key
+        elif f[key] > max2 and f[key] != max1:
+            max2 = f[key]
+            val2 = key
+    print(val,max1,val2,max2)
+
+most_and_second_most_freq()
