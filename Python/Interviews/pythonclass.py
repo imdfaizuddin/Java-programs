@@ -19,6 +19,7 @@ class ElectricCar(Car):
         return self.battery_size
 
 my_car = ElectricCar("Tata", "Nexon", "10kWh")
+# print(my_car.__brand)  This won't work because __brand is private
 print(my_car.full_name())
 print(my_car.get_brand())
 print(my_car.batteryInfo())
@@ -34,10 +35,10 @@ class Animal:
     def bark(self):
         return f"{self.name} says Woof!"
 class Dog(Animal):
-    def __inti__(self,name,age,breed):
-        super().__init__(self)
+    def __init__(self,name,age,breed):
+        super().__init__(name,age)
         self.breed = breed
 
-# my_dog = Dog("Molly", 5, "indian")
+my_dog = Dog("Molly", 5, "indian")
 
-# print(my_dog.bark())
+print(my_dog.bark())
