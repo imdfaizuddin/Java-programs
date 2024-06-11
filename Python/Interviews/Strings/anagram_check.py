@@ -33,4 +33,4 @@ print(chk_anagram(list1,str)[1])    #gett only b[] from tuple (ans,b)
 s1 = 'listen'
 s2 = 'enlist'
 from collections import Counter
-print(Counter(s1)== Counter(s2))
+print(f'{s1} and {s2} are anagram = ',Counter(s1)== Counter(s2))    #listen and enlist are anagram =  True
