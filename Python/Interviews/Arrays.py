@@ -79,4 +79,17 @@ def rem_dup():
     l = l[:i+1]
     print(l, set(l))
 
+'''Remove Duplicate in place'''
 rem_dup()
+
+def remove_dup(arr):
+  i = 0
+  j = 1
+  while j < len(arr):
+    if arr[j] not in arr[:i+1]:
+      arr[i+1] = arr[j]
+      i += 1
+    j += 1
+  arr = arr[:i+1]
+  return arr
+print('ans',remove_dup(l))  #ans [1, 2, 3, 5, 7]
