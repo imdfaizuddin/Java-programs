@@ -91,3 +91,18 @@ def duplicates_in_list():
     print(set(x))
 
 duplicates_in_list()
+
+'''Sum of number digits in List'''
+t = [12, 67, 98, 34]
+
+def sum_of_digits(t):
+    a = []
+    for item in t:
+        s = str(item)
+        sum1 = 0
+        for i in s:
+            sum1 += int(i)
+        a.append(sum1)
+    return a
+    
+print(sum_of_digits(t)) #[3, 13, 17, 7]
