@@ -156,4 +156,18 @@ def uncommon_words():
 
     print(set(a) - set(b))
 
-uncommon_words()
+# uncommon_words()
+
+'''Least Frequent Character in String'''
+def least_freq():
+    r = "GeeksforGeeks"     #f
+    f = {}
+    ans = ''
+    for i in r:
+        f[i] = f.get(i,0) +1
+    for i in r:
+        if f[i] == 1:
+            ans = i
+            break
+    print(ans)
+least_freq()
