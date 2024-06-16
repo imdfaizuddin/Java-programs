@@ -170,4 +170,19 @@ def least_freq():
             ans = i
             break
     print(ans)
-least_freq()
+# least_freq()
+
+'''Replace Different characters in String at Once'''
+def rep_char():
+    t = {'e': '1', 'b': '6', 'i': '4'}
+    r = 'geeksforgeeks is best'     #g11ksforg11ks 4s 61st
+
+    ans = ''
+    for i in r:
+        if i in t:
+            ans += t[i]
+        else:
+            ans += i
+            
+    print(ans)
+rep_char()  
