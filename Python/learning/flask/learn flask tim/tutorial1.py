@@ -9,7 +9,7 @@ def home():
 @app.route("/<name>")
 def user(name):
     # return f"Hello {name}"
-    return render_template("index.html", nameVal = name, r="print Hello 10 times:")
+    return render_template("index.html", nameVal = name, r="print Hello 10 times:", content = ["tim","joe","bill"])
 
 # @app.route("/admin")
 # def admin():

@@ -8,6 +8,10 @@
 <body>
     <h1>This is html homepage</h1>
     <h2>hello world!</h2>
+    <p>iterating over a python list:</p>
+    {%for item in content%}
+    <p>{{item}}</p>
+    {%endfor%}
     <h3>{{nameVal}}</h3>
     <p>{{r}}</p>
     {% for _ in range(10) %}
