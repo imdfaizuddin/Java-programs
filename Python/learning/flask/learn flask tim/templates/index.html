@@ -14,8 +14,13 @@
     {%endfor%}
     <h3>{{nameVal}}</h3>
     <p>{{r}}</p>
-    {% for _ in range(10) %}
+    {% for i in range(10) %}
+        {%if i%2 == 0%}
+            <p>This is odd no: {{i}}</p>
+        {%elif i%5==0 %}
+            <p>This is multiple of 5: {{i}}</p>
         <p>Hello!</p>
+        {%end if%}
     {%endfor%}
 </body>
 </html>
