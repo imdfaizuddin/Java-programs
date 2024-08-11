@@ -1,6 +1,7 @@
 def setExp(my_set:set)-> None:
     for item in my_set:
-        print(item)
+        print(item,", ", end='')
+    print()
     
 s = {1,3,2,5,"hi",7,1}
 s2 = {8,9,5}
