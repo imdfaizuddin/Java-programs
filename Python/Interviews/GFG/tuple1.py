@@ -38,9 +38,9 @@ def symmetric_tuple():
 
 # symmetric_tuple()  
 
-''''''
+'''Remove duplicate lists in tuples (Preserving Order)'''
 def remove_dup():
-    test_tup = ([4, 7, 8], [1, 2, 3], [4, 7, 8], [9, 10, 11], [1, 2, 3])
+    test_tup = ([4, 7, 8], [1, 2, 3], [4, 7, 8], [9, 10, 11], [1, 2, 3])    #([4, 7, 8], [1, 2, 3], [9, 10, 11])
 
     ar = list(test_tup)
     ans = []
