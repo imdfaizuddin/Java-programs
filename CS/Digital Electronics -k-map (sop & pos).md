@@ -155,3 +155,91 @@ Sequential circuits can be described using state diagrams or state tables, which
 - **Sequential Circuits:** Output depends on current inputs and past states; includes memory elements. Example: Counters and registers.
 
 Both types of circuits are essential in digital system design and often work together to create complex and functional electronic systems.
+
+### LOGIC GATES
+
+These terms are fundamental in digital logic and Boolean algebra, which are used in computer science and electronics. Here's a breakdown of each:
+
+### 1. AND
+- **Symbol**: `∧` or `&`
+- **Operation**: The result is `true` (or `1`) if both operands are `true` (or `1`); otherwise, the result is `false` (or `0`).
+- **Truth Table**:
+
+| A | B | A AND B |
+|---|---|---------|
+| 0 | 0 |    0    |
+| 0 | 1 |    0    |
+| 1 | 0 |    0    |
+| 1 | 1 |    1    |
+
+### 2. OR
+- **Symbol**: `∨` or `|`
+- **Operation**: The result is `true` if at least one of the operands is `true`. If both are `false`, then the result is `false`.
+- **Truth Table**:
+
+| A | B | A OR B |
+|---|---|--------|
+| 0 | 0 |    0   |
+| 0 | 1 |    1   |
+| 1 | 0 |    1   |
+| 1 | 1 |    1   |
+
+### 3. NOT
+- **Symbol**: `¬` or `!`
+- **Operation**: The result is the opposite of the operand. If the operand is `true`, the result is `false`, and vice versa.
+- **Truth Table**:
+
+| A | NOT A |
+|---|-------|
+| 0 |   1   |
+| 1 |   0   |
+
+### 4. NAND
+- **Symbol**: `↑`
+- **Operation**: The result is the negation of the AND operation. It's `true` unless both operands are `true`.
+- **Truth Table**:
+
+| A | B | A NAND B |
+|---|---|----------|
+| 0 | 0 |    1     |
+| 0 | 1 |    1     |
+| 1 | 0 |    1     |
+| 1 | 1 |    0     |
+
+### 5. NOR
+- **Symbol**: `↓`
+- **Operation**: The result is the negation of the OR operation. It's `true` only when both operands are `false`.
+- **Truth Table**:
+
+| A | B | A NOR B |
+|---|---|---------|
+| 0 | 0 |    1    |
+| 0 | 1 |    0    |
+| 1 | 0 |    0    |
+| 1 | 1 |    0    |
+
+### 6. XOR (Exclusive OR)
+- **Symbol**: `⊕` or `^`
+- **Operation**: The result is `true` if exactly one of the operands is `true`. If both are the same (both `true` or both `false`), the result is `false`.
+- **Truth Table**:
+
+| A | B | A XOR B |
+|---|---|---------|
+| 0 | 0 |    0    |
+| 0 | 1 |    1    |
+| 1 | 0 |    1    |
+| 1 | 1 |    0    |
+
+### 7. XNOR (Exclusive NOR)
+- **Symbol**: `≡` or `↔`
+- **Operation**: The result is the negation of XOR. It’s `true` if both operands are the same (either both `true` or both `false`).
+- **Truth Table**:
+
+| A | B | A XNOR B |
+|---|---|----------|
+| 0 | 0 |    1     |
+| 0 | 1 |    0     |
+| 1 | 0 |    0     |
+| 1 | 1 |    1     |
+
+These operations form the basis for building more complex logic circuits and algorithms in computing.
