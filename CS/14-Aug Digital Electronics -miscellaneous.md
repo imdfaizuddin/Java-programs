@@ -35,3 +35,107 @@ These include components like:
 - **Memory Cells:** Basic elements of memory devices such as RAM and ROM.
 
 Sequential circuits are fundamental in digital design, enabling complex behavior and control in electronic systems. Understanding the different types helps in designing efficient and reliable digital systems.
+
+### Combinational circuit
+A combinational circuit is a type of digital logic circuit where the output is solely determined by the current inputs, without any dependence on past inputs or states. This contrasts with sequential circuits, which have memory elements and rely on previous states to determine the output.
+
+### Key Characteristics of Combinational Circuits:
+1. **Memoryless**: The output is a direct function of the inputs at any given moment.
+2. **No Feedback**: There are no feedback loops; the circuit does not store information from previous inputs.
+3. **Instantaneous Response**: Ideally, the output responds instantly to changes in the input, though in practice, there may be propagation delays.
+
+### Examples of Combinational Circuits:
+
+#### 1. **Logic Gates:**
+   - **AND Gate**: Produces an output that is true (1) only if all its inputs are true.
+     - **Example**: For an AND gate with inputs A and B, the output Y = A AND B.
+     - **Truth Table**:
+       ```
+       A | B | Y
+       --|---|---
+       0 | 0 | 0
+       0 | 1 | 0
+       1 | 0 | 0
+       1 | 1 | 1
+       ```
+
+   - **OR Gate**: Produces an output that is true if at least one of its inputs is true.
+     - **Example**: For an OR gate with inputs A and B, the output Y = A OR B.
+     - **Truth Table**:
+       ```
+       A | B | Y
+       --|---|---
+       0 | 0 | 0
+       0 | 1 | 1
+       1 | 0 | 1
+       1 | 1 | 1
+       ```
+
+   - **NOT Gate (Inverter)**: Produces an output that is the inverse of its input.
+     - **Example**: For a NOT gate with input A, the output Y = NOT A.
+     - **Truth Table**:
+       ```
+       A | Y
+       --|---
+       0 | 1
+       1 | 0
+       ```
+
+#### 2. **Adders:**
+   - **Half Adder**: Adds two single-bit binary numbers and produces a sum and a carry output.
+     - **Example**: For inputs A and B, the outputs are Sum (S) and Carry (C). 
+     - **Truth Table**:
+       ```
+       A | B | S | C
+       --|---|---|---
+       0 | 0 | 0 | 0
+       0 | 1 | 1 | 0
+       1 | 0 | 1 | 0
+       1 | 1 | 0 | 1
+       ```
+
+   - **Full Adder**: Adds three single-bit binary numbers (including a carry input from a previous addition) and produces a sum and carry output.
+     - **Example**: For inputs A, B, and Carry-in (Cin), the outputs are Sum (S) and Carry-out (Cout).
+     - **Truth Table**:
+       ```
+       A | B | Cin | S | Cout
+       --|---|-----|---|-----
+       0 | 0 |  0  | 0 | 0
+       0 | 0 |  1  | 1 | 0
+       0 | 1 |  0  | 1 | 0
+       0 | 1 |  1  | 0 | 1
+       1 | 0 |  0  | 1 | 0
+       1 | 0 |  1  | 0 | 1
+       1 | 1 |  0  | 0 | 1
+       1 | 1 |  1  | 1 | 1
+       ```
+
+#### 3. **Multiplexers (MUX):**
+   - **2-to-1 Multiplexer**: Selects one of two inputs based on a select line.
+     - **Example**: For inputs I0, I1 and a select line S, the output Y is:
+       - Y = I0 if S = 0
+       - Y = I1 if S = 1
+     - **Truth Table**:
+       ```
+       S | I0 | I1 | Y
+       --|----|----|---
+       0 | 0  | 1  | 0
+       0 | 1  | 0  | 1
+       1 | 0  | 1  | 1
+       1 | 1  | 0  | 0
+       ```
+
+#### 4. **Decoders:**
+   - **2-to-4 Decoder**: Converts 2 input bits to a one-hot output (one of four outputs is high based on the input combination).
+     - **Example**: For inputs A and B, the outputs are Y0, Y1, Y2, and Y3 where only one of these is high at a time.
+     - **Truth Table**:
+       ```
+       A | B | Y0 | Y1 | Y2 | Y3
+       --|---|----|----|----|----
+       0 | 0 | 1  | 0  | 0  | 0
+       0 | 1 | 0  | 1  | 0  | 0
+       1 | 0 | 0  | 0  | 1  | 0
+       1 | 1 | 0  | 0  | 0  | 1
+       ```
+
+These examples illustrate the variety of combinational circuits used in digital systems to perform various logical and arithmetic functions. Each circuit operates purely based on the current values of its inputs, making them fundamental building blocks in digital electronics.
