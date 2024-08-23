@@ -139,3 +139,30 @@ A combinational circuit is a type of digital logic circuit where the output is s
        ```
 
 These examples illustrate the variety of combinational circuits used in digital systems to perform various logical and arithmetic functions. Each circuit operates purely based on the current values of its inputs, making them fundamental building blocks in digital electronics.
+
+### input and output of half adder
+
+A half adder is a basic digital circuit used to perform the addition of two single-bit binary numbers. It produces two outputs: the sum and the carry.
+
+### Inputs:
+1. **A**: The first single-bit binary input.
+2. **B**: The second single-bit binary input.
+
+### Outputs:
+1. **Sum (S)**: The result of the addition of the inputs A and B, excluding the carry. The sum output is 1 if exactly one of the inputs is 1; otherwise, it is 0.
+2. **Carry (C)**: Indicates whether there is a carry-out from the addition of the inputs. The carry output is 1 if both inputs A and B are 1; otherwise, it is 0.
+
+### Truth Table:
+
+| A | B | Sum (S) | Carry (C) |
+|---|---|---------|-----------|
+| 0 | 0 |    0    |     0     |
+| 0 | 1 |    1    |     0     |
+| 1 | 0 |    1    |     0     |
+| 1 | 1 |    0    |     1     |
+
+### Boolean Equations:
+- **Sum (S) = A ⊕ B** (where ⊕ denotes the XOR operation)
+- **Carry (C) = A ∧ B** (where ∧ denotes the AND operation)
+
+The half adder is a fundamental building block in digital electronics and is used in combination with other logic circuits to perform more complex arithmetic operations.
