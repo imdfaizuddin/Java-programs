@@ -213,3 +213,71 @@ Here’s a simple table showing all possible combinations of A, B, and Cin, and 
 - **In Addition:** Full adders are used in computers to add numbers. They handle bits and make sure that if you need to carry over, it gets passed to the next digit.
 
 So, a full adder is like a small calculator that helps add binary numbers and handle carry-overs to the next bit.
+
+### Digital Encoder
+
+A digital encoder is a combinational logic circuit or device that converts a set of input lines into a binary code on output lines. Digital encoders are used in various applications to represent a particular input signal with a unique binary code. Here’s a detailed explanation of different types of digital encoders:
+
+### 1. **Binary Encoder**
+
+#### **Function**:
+- Converts \(2^n\) input lines into an \(n\)-bit binary code.
+- For example, a 4-to-2 binary encoder converts 4 input lines into 2 output lines.
+
+#### **Operation**:
+- When a particular input line is activated, the encoder outputs the binary code corresponding to that input line.
+- Only one input line should be active at a time to ensure a unique output.
+
+#### **Example**:
+- For a 4-to-2 binary encoder:
+  - Input lines: \(I_0, I_1, I_2, I_3\)
+  - Output lines: \(O_0, O_1\)
+  - If \(I_2\) is active, the output will be \(10\) (binary for 2).
+
+### 2. **Priority Encoder**
+
+#### **Function**:
+- Similar to a binary encoder but with priority levels assigned to input lines.
+- Encodes the highest-priority active input line and ignores lower-priority inputs.
+
+#### **Operation**:
+- The encoder outputs the binary code of the highest-priority input that is active.
+- Useful in systems where multiple inputs can be active simultaneously, and a decision needs to be made based on priority.
+
+#### **Example**:
+- For a 4-to-2 priority encoder with priorities \(I_0\) (lowest) to \(I_3\) (highest):
+  - If \(I_2\) and \(I_3\) are active, the output will be \(11\) (binary for 3) because \(I_3\) has the highest priority.
+
+### 3. **Decimal to Binary Encoder**
+
+#### **Function**:
+- Converts decimal numbers into their binary equivalents.
+- This type of encoder is used less frequently than binary and priority encoders but follows a similar conversion principle.
+
+#### **Operation**:
+- Takes a decimal input (e.g., from 0 to 9) and outputs the binary representation.
+- For example, a 10-to-4 decimal to binary encoder converts a decimal number ranging from 0 to 9 into a 4-bit binary code.
+
+### 4. **Octal Encoder**
+
+#### **Function**:
+- Converts octal (base-8) numbers into binary code.
+- Useful in systems where data is represented in octal form.
+
+#### **Operation**:
+- Takes octal inputs (e.g., 0 to 7) and provides the corresponding 3-bit binary output.
+
+#### **Example**:
+- For an 8-to-3 octal encoder:
+  - Input lines: \(I_0\) to \(I_7\)
+  - Output lines: \(O_0, O_1, O_2\)
+  - If \(I_5\) is active, the output will be \(101\) (binary for 5).
+
+### Summary
+
+- **Binary Encoder**: Maps \(2^n\) input lines to \(n\)-bit binary output.
+- **Priority Encoder**: Outputs the binary code of the highest-priority active input.
+- **Decimal to Binary Encoder**: Converts decimal numbers into binary codes.
+- **Octal Encoder**: Converts octal numbers into binary codes.
+
+Each type of digital encoder serves different needs based on how data is represented and the specific requirements of the system.
