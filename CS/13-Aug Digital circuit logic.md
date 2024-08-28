@@ -147,3 +147,80 @@ Let's consider a 4-to-1 multiplexer with inputs `I0`, `I1`, `I2`, `I3`, and sele
 - **Applications**: Used for data routing, communication systems, resource sharing, and control systems.
 
 Multiplexers are crucial in digital design for efficiently managing data paths and simplifying circuit designs by allowing multiple signals to share a single channel.
+
+### explain de-multiplexer
+
+Sure! Let's dive deeper into de-multiplexers with a more detailed explanation and examples.
+
+### Basics of a De-multiplexer
+
+A de-multiplexer (de-mux) is a combinational logic circuit that takes a single input signal and channels it to one of several output lines based on the state of the control lines. It's the opposite of a multiplexer (mux), which combines multiple inputs into one output.
+
+### Structure of a De-multiplexer
+
+1. **Input Signal**: The de-multiplexer has one primary input where the signal comes in.
+2. **Control Lines**: These determine which of the output lines the input signal will be directed to. The number of control lines defines how many output lines the de-multiplexer has.
+3. **Output Lines**: These are the lines where the input signal can be routed. At any time, only one output line will be active (high) while all others are inactive (low).
+
+### How It Works
+
+The de-multiplexer uses control lines to determine which output line will receive the input signal. Here's how it works:
+
+1. **Control Signal Selection**: The control signals act as an address for the output lines. For a de-multiplexer with \( n \) control lines, there are \( 2^n \) possible output lines.
+
+2. **Activation of Output Line**: Based on the binary value of the control lines, one of the \( 2^n \) output lines is activated. This means the input signal is sent to that particular output line.
+
+### Examples
+
+#### Example 1: 1-to-4 De-multiplexer
+
+A 1-to-4 de-multiplexer has:
+- 1 Input Line
+- 2 Control Lines
+- 4 Output Lines
+
+**Truth Table:**
+
+| Control Lines | Output 0 | Output 1 | Output 2 | Output 3 |
+|---------------|----------|----------|----------|----------|
+| 00            | 1        | 0        | 0        | 0        |
+| 01            | 0        | 1        | 0        | 0        |
+| 10            | 0        | 0        | 1        | 0        |
+| 11            | 0        | 0        | 0        | 1        |
+
+- When control lines are "00," the input is routed to Output 0.
+- When control lines are "01," the input is routed to Output 1.
+- When control lines are "10," the input is routed to Output 2.
+- When control lines are "11," the input is routed to Output 3.
+
+#### Example 2: 1-to-8 De-multiplexer
+
+A 1-to-8 de-multiplexer has:
+- 1 Input Line
+- 3 Control Lines
+- 8 Output Lines
+
+**Truth Table:**
+
+| Control Lines | Output 0 | Output 1 | Output 2 | Output 3 | Output 4 | Output 5 | Output 6 | Output 7 |
+|---------------|----------|----------|----------|----------|----------|----------|----------|----------|
+| 000           | 1        | 0        | 0        | 0        | 0        | 0        | 0        | 0        |
+| 001           | 0        | 1        | 0        | 0        | 0        | 0        | 0        | 0        |
+| 010           | 0        | 0        | 1        | 0        | 0        | 0        | 0        | 0        |
+| 011           | 0        | 0        | 0        | 1        | 0        | 0        | 0        | 0        |
+| 100           | 0        | 0        | 0        | 0        | 1        | 0        | 0        | 0        |
+| 101           | 0        | 0        | 0        | 0        | 0        | 1        | 0        | 0        |
+| 110           | 0        | 0        | 0        | 0        | 0        | 0        | 1        | 0        |
+| 111           | 0        | 0        | 0        | 0        | 0        | 0        | 0        | 1        |
+
+- When control lines are "000," the input is routed to Output 0.
+- When control lines are "001," the input is routed to Output 1.
+- This pattern continues until control lines are "111," routing the input to Output 7.
+
+### Applications
+
+1. **Data Routing**: In communication systems, de-multiplexers route data from one source to multiple destinations based on control signals.
+2. **Memory Addressing**: In digital memory systems, de-multiplexers are used to select the memory location that will receive or output data.
+3. **Communication Systems**: De-multiplexers are used to manage the distribution of signals to different channels or devices.
+
+In summary, a de-multiplexer is a crucial component in digital systems for managing and directing signals efficiently, providing flexibility and control in data routing.
