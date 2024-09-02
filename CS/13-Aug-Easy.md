@@ -90,3 +90,70 @@ Think of a de-multiplexer as a “switchboard” for data.
 3. **Display Screens**: It controls which parts of a display light up, like choosing which parts of a billboard to show a message.
 
 In summary, a de-multiplexer is a tool that takes one input and uses control signals to decide which of many outputs should receive the data. It’s like a smart traffic manager for data, directing it to the right place.
+
+
+### What is Subtractor?
+
+A subtractor is a digital circuit that performs subtraction. It takes two binary numbers and subtracts one from the other. There are two main types of subtractors:
+
+1. **Half Subtractor**
+2. **Full Subtractor**
+
+#### 1. Half Subtractor
+
+- **Purpose**: Subtract one single-bit number from another single-bit number.
+- **Inputs**: Two bits, say \( A \) and \( B \).
+- **Outputs**: 
+  - **Difference**: The result of the subtraction.
+  - **Borrow**: Indicates if we need to "borrow" from the next higher bit in multi-bit subtraction (just like borrowing in decimal subtraction).
+
+**How it works:**
+- **Difference**: Is computed using the XOR (exclusive OR) operation. Essentially, if \( A \) and \( B \) are different, the result is 1; otherwise, it is 0.
+- **Borrow**: Is computed when \( A \) is smaller than \( B \). If this is the case, you need to borrow 1 from the next bit.
+
+**Truth Table:**
+
+| A | B | Difference | Borrow |
+|---|---|------------|--------|
+| 0 | 0 | 0          | 0      |
+| 0 | 1 | 1          | 1      |
+| 1 | 0 | 1          | 0      |
+| 1 | 1 | 0          | 0      |
+
+- When \( A \) is 0 and \( B \) is 1, the result is 1 (difference) and you need to borrow 1.
+
+#### 2. Full Subtractor
+
+- **Purpose**: Subtract one bit from another, plus take into account any borrow from a previous subtraction.
+- **Inputs**: Three bits—\( A \), \( B \), and the borrow from a previous subtraction.
+- **Outputs**: 
+  - **Difference**: The result of the subtraction.
+  - **Borrow Out**: Indicates if there's a need to borrow for the next stage.
+
+**How it works:**
+- **Difference**: Is calculated with an XOR operation involving \( A \), \( B \), and the borrow from the previous bit.
+- **Borrow Out**: Is calculated by considering various conditions where a borrow might be needed.
+
+**Truth Table:**
+
+| A | B | Borrow_in | Difference | Borrow_out |
+|---|---|-----------|------------|------------|
+| 0 | 0 | 0         | 0          | 0          |
+| 0 | 0 | 1         | 1          | 1          |
+| 0 | 1 | 0         | 1          | 1          |
+| 0 | 1 | 1         | 0          | 1          |
+| 1 | 0 | 0         | 1          | 0          |
+| 1 | 0 | 1         | 0          | 0          |
+| 1 | 1 | 0         | 0          | 0          |
+| 1 | 1 | 1         | 1          | 1          |
+
+- When \( A \) is 0, \( B \) is 1, and there’s no previous borrow, the result is 1 and you need to borrow.
+
+### Visualizing a Subtractor
+
+Think of a subtractor as a simple machine that takes in two numbers and performs subtraction. 
+
+- **Half Subtractor** is like a basic machine that only works on two numbers at a time.
+- **Full Subtractor** is a bit more advanced because it also takes into account any borrowing from a previous subtraction, making it suitable for more complex multi-bit calculations.
+
+In essence, subtractors are the circuits that help digital devices like calculators and computers do subtraction. They handle the math behind the scenes, making sure that subtraction operations are performed correctly.
