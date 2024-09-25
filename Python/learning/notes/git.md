@@ -75,3 +75,21 @@ To rename a branch in Git, you can follow these steps depending on whether you w
 ### Important Note
 
 Make sure to notify your team if you're renaming branches that others might be using!
+
+### To create a new branch named `footer`, you should use:
+
+```bash
+git branch footer
+```
+
+Or, if you want to create the branch and switch to it immediately, use:
+
+```bash
+git checkout -b footer
+```
+
+If you're using a newer version of Git, you can also use:
+
+```bash
+git switch -b footer
+```
