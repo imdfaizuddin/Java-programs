@@ -93,3 +93,13 @@ If you're using a newer version of Git, you can also use:
 ```bash
 git switch -b footer
 ```
+
+### **Stash Changes**
+If you need to switch branches but have uncommitted changes:
+```bash
+git stash
+# Switch branches
+git checkout other-branch
+# Apply the stash later
+git stash pop
+```
