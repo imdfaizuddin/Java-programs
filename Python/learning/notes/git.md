@@ -94,7 +94,7 @@ If you're using a newer version of Git, you can also use:
 git switch -b footer
 ```
 
-### **Stash Changes**
+**Stash Changes**
 If you need to switch branches but have uncommitted changes:
 ```bash
 git stash
@@ -103,3 +103,7 @@ git checkout other-branch
 # Apply the stash later
 git stash pop
 ```
+**Cherry-Pick Commits**: If you want to apply a specific commit from another branch:
+    ```bash
+    git cherry-pick <commit>
+    ```
