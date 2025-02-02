@@ -336,5 +336,91 @@ So, **every composite key is a candidate key**, but not every candidate key is a
 | **Composite Key** | A candidate key that consists of **two or more columns**.                       | `(StudentID, CourseID)`.                 |
 
 ---
-
 So, to answer your question directly: **Yes, a candidate key with 2 columns is also a composite key**. 😊 Let me know if you have more questions!
+
+### Alternative Key
+
+Great question! Let’s talk about **Alternative Key** in the context of relational databases.
+
+---
+
+### **Alternative Key**
+- **Definition**: An alternative key is any **candidate key** that is **not chosen as the primary key** in a table.
+- **Properties**:
+  - It is a candidate key (unique and minimal).
+  - It is not the primary key.
+  - It can be used as a backup or alternative way to uniquely identify rows in a table.
+- **Use Case**: Alternative keys are useful when you want to enforce uniqueness on other columns besides the primary key.
+
+---
+
+### **Example to Illustrate**
+
+Let’s use the **Students** table again:
+
+| **StudentID** | **Email**          | **Name**   | **Phone**       |
+|---------------|--------------------|------------|-----------------|
+| 101           | john@example.com   | John Doe   | 123-456-7890    |
+| 102           | jane@example.com   | Jane Smith | 987-654-3210    |
+| 103           | alice@example.com  | Alice Brown| 555-555-5555    |
+
+---
+
+### **Step-by-Step Explanation**
+
+1. **Candidate Keys**:
+   - In this table, both `StudentID` and `Email` are candidate keys because:
+     - They are unique for each student.
+     - They are minimal (no subset of these columns can uniquely identify a row).
+
+2. **Primary Key**:
+   - Suppose we choose `StudentID` as the **primary key**.
+
+3. **Alternative Key**:
+   - Since `Email` is also a candidate key but not chosen as the primary key, it becomes the **alternative key**.
+
+---
+
+### **Why Use Alternative Keys?**
+- **Uniqueness Enforcement**: Alternative keys ensure that no two rows have the same value in the alternative key column(s). For example, no two students can have the same email.
+- **Flexibility**: They provide another way to uniquely identify rows, which can be useful for queries or constraints.
+
+---
+
+### **Another Example**
+
+#### Table: **Employees**
+
+| **EmployeeID** | **SSN**       | **Name**   | **Department** |
+|----------------|---------------|------------|----------------|
+| 1              | 123-45-6789   | John Doe   | HR             |
+| 2              | 987-65-4321   | Jane Smith | IT             |
+| 3              | 555-55-5555   | Alice Brown| Finance        |
+
+- **Candidate Keys**:
+  - `EmployeeID` (unique for each employee).
+  - `SSN` (Social Security Number, unique for each employee).
+- **Primary Key**: Suppose `EmployeeID` is chosen as the primary key.
+- **Alternative Key**: `SSN` is the alternative key because it is a candidate key but not the primary key.
+
+---
+
+### **Key Differences**
+
+| **Aspect**          | **Primary Key**                          | **Alternative Key**                     |
+|----------------------|------------------------------------------|------------------------------------------|
+| **Definition**       | The chosen candidate key to uniquely identify rows. | Any candidate key that is not chosen as the primary key. |
+| **Uniqueness**       | Must be unique and non-NULL.             | Must be unique and non-NULL.             |
+| **Number per Table** | Only **one** primary key per table.      | Can have **multiple** alternative keys.  |
+| **Example**          | `StudentID` in the `Students` table.     | `Email` in the `Students` table.         |
+
+---
+
+### **Summary**
+- An **alternative key** is any candidate key that is not selected as the primary key.
+- It provides an additional way to uniquely identify rows in a table.
+- Examples: `Email` in the `Students` table or `SSN` in the `Employees` table.
+
+---
+
+Let me know if you need further clarification or more examples! 😊
