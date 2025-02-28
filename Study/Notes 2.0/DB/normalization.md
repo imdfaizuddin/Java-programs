@@ -238,7 +238,7 @@ After 3NF:
 Let me know if you need further clarification or examples! 😊
 
 ### Normalization 2, 10th Sept (has questions.)
-#### explain dependencies and its types
+### Explain dependencies and its types:
 
 Great question! **Dependencies** in database design describe how attributes (columns) in a table relate to each other. Understanding dependencies is crucial for normalization and ensuring a well-structured database. Let’s break it down:
 

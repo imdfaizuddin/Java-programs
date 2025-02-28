@@ -293,5 +293,3 @@ WHERE name LIKE '%\%%' ESCAPE '\';
 The `LIKE` operator is a powerful tool for searching and filtering data based on patterns. By combining it with wildcard characters (`%` and `_`), you can perform flexible and dynamic searches in your SQL queries. However, be mindful of its performance implications, especially when dealing with large datasets.
 
 ---
-
-This indexed version of your file includes a **Table of Contents** at the top, allowing users to navigate easily to specific sections. Let me know if you need further adjustments! 😊
