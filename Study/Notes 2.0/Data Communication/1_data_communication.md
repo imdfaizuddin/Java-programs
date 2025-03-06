@@ -121,3 +121,80 @@ A device that enables communication between digital and analog systems by conver
 ---
 
 This improved version adds better structure, more explanations, real-world examples, and a comparison table. Let me know if you need further modifications! 🚀
+
+## **Network Model and Its Types**  
+
+A **network model** defines how data is transmitted, processed, and managed in a computer network. It provides a structured approach to networking by dividing communication into layers, each with a specific function.  
+
+There are **two primary network models**:  
+1. **OSI Model (Open Systems Interconnection Model)**  
+2. **TCP/IP Model (Transmission Control Protocol/Internet Protocol Model)**  
+
+---
+
+## **1. OSI Model (Open Systems Interconnection Model)**  
+The OSI model is a **theoretical model** developed by the **International Organization for Standardization (ISO)** to standardize network communication. It consists of **seven layers**, each handling specific tasks.  
+
+### **OSI Model Layers:**
+| **Layer** | **Function** | **Example Protocols/Technologies** |
+|-----------|-------------|-----------------------------------|
+| **7. Application Layer** | Provides user interface and network services | HTTP, FTP, SMTP, DNS |
+| **6. Presentation Layer** | Ensures data formatting, encryption, and compression | SSL, TLS, JPEG, MP3 |
+| **5. Session Layer** | Establishes, maintains, and terminates sessions | NetBIOS, RPC |
+| **4. Transport Layer** | Handles data flow control, error detection, and retransmission | TCP, UDP |
+| **3. Network Layer** | Manages logical addressing (IP addressing) and routing | IP, ICMP, ARP |
+| **2. Data Link Layer** | Responsible for error detection and framing | Ethernet, MAC, PPP |
+| **1. Physical Layer** | Transmits raw bits over the communication medium | Cables, Hubs, Wi-Fi |
+
+### **Advantages of the OSI Model:**  
+✅ Provides a **clear modular structure** for understanding networking.  
+✅ Ensures **interoperability** between different network hardware and software.  
+✅ Helps in **troubleshooting network issues** efficiently.  
+
+### **Disadvantages of the OSI Model:**  
+❌ More **complex** compared to real-world implementations.  
+❌ **Not widely used** in practical networking (TCP/IP is more dominant).  
+
+---
+
+## **2. TCP/IP Model (Transmission Control Protocol/Internet Protocol Model)**  
+The **TCP/IP model** is a **practical and widely used network model** that forms the backbone of the Internet. It is simpler than the OSI model and consists of **four layers**.  
+
+### **TCP/IP Model Layers:**
+| **Layer** | **Equivalent OSI Layer(s)** | **Function** | **Example Protocols** |
+|-----------|----------------------|-------------|-------------------|
+| **4. Application Layer** | OSI Layers 7, 6, 5 | Handles user applications and services | HTTP, FTP, SMTP, DNS |
+| **3. Transport Layer** | OSI Layer 4 | Ensures reliable data transfer and error correction | TCP, UDP |
+| **2. Internet Layer** | OSI Layer 3 | Handles IP addressing and routing | IP, ICMP, ARP |
+| **1. Network Access Layer** | OSI Layers 2, 1 | Deals with physical transmission of data | Ethernet, Wi-Fi, PPP |
+
+### **Advantages of the TCP/IP Model:**  
+✅ **Widely used** for Internet and networking.  
+✅ **Simpler and more practical** compared to the OSI model.  
+✅ Supports **cross-platform communication** between different networks.  
+
+### **Disadvantages of the TCP/IP Model:**  
+❌ **Less modular** than OSI; layers are not strictly separated.  
+❌ **Difficult to replace protocols** due to interdependence.  
+
+---
+
+## **Comparison: OSI vs. TCP/IP Model**  
+
+| **Feature** | **OSI Model** | **TCP/IP Model** |
+|------------|-------------|----------------|
+| **Number of Layers** | 7 | 4 |
+| **Developed By** | ISO | U.S. Department of Defense (DoD) |
+| **Usage** | Theoretical and educational | Practical and widely used |
+| **Protocol Dependency** | Protocol-independent | Protocol-dependent (IP-based) |
+| **Flexibility** | More modular | Less modular |
+
+---
+
+![network_model](./network_model.png)
+
+### **Conclusion:**  
+- The **OSI Model** is useful for understanding **theoretical networking concepts** and troubleshooting.  
+- The **TCP/IP Model** is the **practical model** used in real-world networking and forms the basis of the **Internet.**  
+
+Would you like me to add more details or examples? 🚀
