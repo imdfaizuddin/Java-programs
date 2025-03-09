@@ -11,7 +11,11 @@ In computer networking, various devices help in communication, data transfer, an
    - **Wired NIC** – Uses Ethernet cables.  
    - **Wireless NIC** – Uses Wi-Fi for communication.  
 ✅ **Example:** A laptop’s Wi-Fi adapter or an Ethernet card in a desktop PC.  
-✅ **Exam Tip:** Every device connected to a network must have an NIC.  
+✅ **Exam Tip:** Every device connected to a network must have an NIC. 
+- Each NIC has a unique MAC address.
+- It operates at the Data Link Layer (Layer 2) of the OSI model.
+- IEEE 802.3 Standard
+- Connector used: RJ-45
 
 ---
 
@@ -20,7 +24,9 @@ In computer networking, various devices help in communication, data transfer, an
 ✅ **Function:** Extends a wired network by enabling wireless communication.  
 ✅ **Example:** Wi-Fi routers in homes and public places.  
 ✅ **Exam Tip:** Access Points work at the **Data Link Layer (Layer 2)** and can be used to extend Wi-Fi coverage.  
-
+- IEEE 802.11 Standard
+- IEEE 802.15 B/T
+- IEEE 802.16 Wireless Lan
 ---
 
 ### **3. Bridge**  
@@ -115,4 +121,30 @@ In computer networking, various devices help in communication, data transfer, an
 ✅ **Router** works at the **Network Layer (Layer 3)**, while **switch** works at the **Data Link Layer (Layer 2)**.  
 ✅ **Access Points** are used in Wi-Fi networks to extend coverage.  
 
-Would you like a summary or further explanations on any topic? 🚀
+
+## **Gateway**  
+✅ **Definition:** A **gateway** is a network device that connects two different networks using different communication protocols.  
+✅ **Function:**  
+   - Acts as an **interface** between networks with different architectures, such as a LAN and the internet.  
+   - Converts data formats and protocols to ensure smooth communication.  
+   - Works at **all layers of the OSI model**, depending on the type of gateway.  
+✅ **Example:**  
+   - A **VoIP Gateway** converts voice signals into data packets for internet transmission.  
+   - A **Cloud Gateway** connects on-premises networks to cloud services.  
+✅ **Exam Tip:** A **gateway is more advanced than a router** because it **translates different protocols**, while a router only directs packets between networks.  
+
+---
+
+## **VSAT (Very Small Aperture Terminal)**  
+✅ **Definition:** VSAT is a **satellite-based communication system** used for remote data, voice, and video transmission.  
+✅ **Function:**  
+   - Uses **small dish antennas** (typically <3 meters) to communicate with satellites.  
+   - Provides **internet access in remote areas** where wired connectivity is unavailable.  
+   - Works with **geostationary satellites** to send and receive signals.  
+✅ **Uses of VSAT:**  
+   - **Rural Internet Access** – Used in areas without broadband.  
+   - **Banking & ATMs** – Used for secure transactions in remote branches.  
+   - **Military & Disaster Recovery** – Used for emergency communication.  
+✅ **Exam Tip:** **VSAT is ideal for remote locations** where traditional wired networks **cannot reach**.  
+
+Would you like me to explain more about their working mechanisms? 🚀
