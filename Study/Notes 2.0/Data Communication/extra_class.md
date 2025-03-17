@@ -87,3 +87,81 @@ Parity checking is a simple method for detecting errors in transmitted data.
 - Not suitable for high-noise environments.
 
 Would you like to explore **other error detection methods**, such as **CRC (Cyclic Redundancy Check) or Hamming Code (error correction)?** 🚀
+
+### **Flow Control in Data Communication**
+Flow control is a technique used in data communication to **regulate the rate of data transmission** between a sender and a receiver, ensuring that the receiver is not overwhelmed with data it cannot process.
+
+#### **Why is Flow Control Needed?**
+- The **sender** may transmit data at a **higher speed** than the **receiver** can process.
+- If there is no control, the receiver’s buffer may **overflow**, leading to **data loss**.
+- Flow control ensures **smooth and efficient communication** between devices.
+
+---
+
+## **Types of Flow Control**
+There are two main types of flow control techniques:
+
+### **1. Stop-and-Wait Flow Control**
+- The sender **sends one frame** and **waits for an acknowledgment (ACK)** from the receiver before sending the next frame.
+- If no acknowledgment is received (due to error or packet loss), the sender retransmits the frame.
+
+#### **Example**
+1. **Sender sends Frame 1.**
+2. **Receiver processes Frame 1 and sends an acknowledgment (ACK1).**
+3. **Sender receives ACK1 and sends Frame 2.**
+4. The process repeats for each frame.
+
+#### **Advantages:**
+✔ Simple to implement  
+✔ Ensures no data loss  
+
+#### **Disadvantages:**
+✖ Slow, as the sender waits for each ACK before sending the next frame  
+✖ Inefficient for high-speed networks  
+
+---
+
+### **2. Sliding Window Protocol**
+- Allows multiple frames to be sent **before waiting for an acknowledgment**.
+- Uses a **window size (N)** to control how many frames can be sent before requiring an acknowledgment.
+- Two types of sliding window protocols:
+  - **Go-Back-N (GBN)**
+  - **Selective Repeat (SR)**
+
+#### **A. Go-Back-N (GBN) Protocol**
+- The sender can **send multiple frames** (up to a window size `N`) without waiting for individual ACKs.
+- If an error occurs in a frame, **all subsequent frames are retransmitted** from the error frame.
+
+##### **Example (Go-Back-3, N=3)**
+1. Sender sends **Frames 1, 2, 3**.
+2. Receiver **acknowledges Frame 1 and 2**.
+3. Frame 3 gets **corrupted**.
+4. Sender **retransmits Frame 3 and all subsequent frames**.
+
+#### **B. Selective Repeat (SR) Protocol**
+- The sender **only retransmits the corrupted frames**, not the entire sequence.
+- More **efficient** than GBN but requires **more buffer space**.
+
+##### **Example (Selective Repeat, N=3)**
+1. Sender sends **Frames 1, 2, 3**.
+2. Receiver **ACKs Frame 1 and 2**.
+3. Frame 3 is **corrupted**.
+4. Sender **retransmits only Frame 3**.
+
+#### **Advantages of Sliding Window Protocol**
+✔ **More efficient** than Stop-and-Wait  
+✔ **Better throughput** for high-speed networks  
+
+#### **Disadvantages**
+✖ Requires **more memory (buffering frames)**  
+✖ More **complex to implement**  
+
+---
+
+## **Comparison of Flow Control Techniques**
+| Flow Control Method | Efficiency | Error Handling | When to Use |
+|---------------------|------------|---------------|--------------|
+| **Stop-and-Wait** | Low | Retransmit single frame | Low-speed or reliable links |
+| **Go-Back-N** | Moderate | Retransmit all frames after error | High-speed networks, less buffering needed |
+| **Selective Repeat** | High | Retransmit only the error frame | High-speed networks, but requires more memory |
+
