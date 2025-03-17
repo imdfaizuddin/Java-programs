@@ -165,3 +165,99 @@ There are two main types of flow control techniques:
 | **Go-Back-N** | Moderate | Retransmit all frames after error | High-speed networks, less buffering needed |
 | **Selective Repeat** | High | Retransmit only the error frame | High-speed networks, but requires more memory |
 
+
+## **Error Control in Data Communication**
+Error control is a technique used to **detect and correct errors** that occur during data transmission. It ensures that the data received is **accurate and reliable**, even in the presence of noise or interference.
+
+---
+
+## **Types of Error Control**
+Error control mechanisms can be classified into two main categories:
+
+### **1. Error Detection (Identifying Errors)**
+- Errors in data transmission are identified, but no correction is done.  
+- The receiver requests the sender to retransmit the corrupted data.  
+- Common techniques:
+  - **Parity Check**
+  - **Cyclic Redundancy Check (CRC)**
+  - **Checksum**
+
+### **2. Error Correction (Fixing Errors)**
+- Errors are both **detected and corrected** using redundant bits (error correction codes).
+- There are two approaches:
+  - **Forward Error Correction (FEC)** – Errors are corrected **without retransmission**.
+  - **Automatic Repeat Request (ARQ)** – The receiver **requests retransmission** when an error is detected.
+
+---
+
+## **Error Control Techniques**
+### **1. Automatic Repeat Request (ARQ)**
+ARQ is a technique where the **receiver detects errors and requests retransmission** of corrupted data.  
+There are three types of ARQ:
+
+#### **A. Stop-and-Wait ARQ**
+- The sender transmits **one frame** at a time and waits for an acknowledgment (ACK) from the receiver.
+- If an error is detected, the receiver sends a **negative acknowledgment (NAK)**, and the sender retransmits the frame.
+
+**Example:**
+1. **Sender sends Frame 1.**
+2. **Receiver detects an error and sends NAK.**
+3. **Sender retransmits Frame 1.**
+4. **Receiver acknowledges (ACK), and transmission continues.**
+
+✔ **Simple and reliable**  
+✖ **Slow**, as the sender waits for each ACK before sending the next frame  
+
+---
+
+#### **B. Go-Back-N ARQ**
+- The sender transmits multiple frames (up to a window size `N`) before waiting for an acknowledgment.
+- If an error occurs, the receiver **discards the incorrect frame and all subsequent frames**, requesting retransmission from the error point.
+
+**Example (Go-Back-3, N=3):**
+1. Sender sends **Frames 1, 2, 3**.
+2. Frame 2 gets **corrupted**.
+3. Receiver **discards Frame 2 and 3**.
+4. Sender **retransmits Frames 2 and 3**.
+
+✔ **Better efficiency than Stop-and-Wait**  
+✖ **Retransmits correct frames unnecessarily**, reducing efficiency  
+
+---
+
+#### **C. Selective Repeat ARQ**
+- The sender transmits multiple frames, but **only retransmits the corrupted frames** instead of the entire sequence.
+- The receiver buffers correct frames and requests retransmission of only the erroneous ones.
+
+**Example (Selective Repeat, N=3):**
+1. Sender sends **Frames 1, 2, 3**.
+2. Frame 2 gets **corrupted**.
+3. Receiver **acknowledges Frame 1 and 3**, requests only Frame 2.
+4. Sender **retransmits only Frame 2**.
+
+✔ **More efficient than Go-Back-N**  
+✖ **Requires more buffer memory at the receiver**  
+
+---
+
+### **2. Forward Error Correction (FEC)**
+- The sender adds **extra redundant bits** (error correction codes) so that the receiver can **detect and correct errors without retransmission**.
+- Used in cases where retransmission is costly (e.g., satellite communication, streaming).
+
+#### **Common FEC Techniques**
+- **Hamming Code** (Corrects single-bit errors)
+- **Reed-Solomon Code** (Corrects burst errors)
+- **BCH Code** (Used in mobile communication)
+
+---
+
+## **Comparison of Error Control Techniques**
+| Technique | Type | Error Handling | When to Use |
+|-----------|------|---------------|-------------|
+| **Stop-and-Wait ARQ** | ARQ | Retransmit single frame | Low-speed reliable networks |
+| **Go-Back-N ARQ** | ARQ | Retransmit from the error frame | High-speed networks, low memory |
+| **Selective Repeat ARQ** | ARQ | Retransmit only the error frame | High-speed, but requires more memory |
+| **Hamming Code** | FEC | Corrects single-bit errors | RAM, wireless communication |
+| **Reed-Solomon Code** | FEC | Corrects burst errors | CDs, DVDs, satellite transmission |
+
+Would you like a **detailed example of Hamming Code encoding and decoding?** 🚀
