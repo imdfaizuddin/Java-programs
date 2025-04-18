@@ -206,3 +206,87 @@ Like deque, but uses circular logic for fixed-size arrays.
 | Circular Deque     | Circular + Deque behavior    | LRU cache, history navigation             |
 
 ---
+
+Great! You're diving deeper now 😎  
+Let’s explore **Input Restricted Deque** and **Output Restricted Deque**, which are special types of **Deques (Double-Ended Queues)**.
+
+---
+
+## 🔄 What is a Deque Again?
+
+A **Deque** (Double-Ended Queue) allows **insertion and deletion from both ends** — front and rear.
+
+But in **restricted deques**, we limit **either insertion or deletion** to one end only.
+
+---
+
+## 1. 🔐 **Input Restricted Deque**
+
+### 🧠 Definition:
+- **Insertions allowed only at one end** (typically the **rear**)
+- **Deletions allowed at both ends** (front and rear)
+
+### 📥 Operations:
+
+| Operation        | Allowed? |
+|------------------|----------|
+| `insertRear(x)`  | ✅ Yes   |
+| `insertFront(x)` | ❌ No    |
+| `deleteFront()`  | ✅ Yes   |
+| `deleteRear()`   | ✅ Yes   |
+
+### 📊 Use Case:
+Used when data comes from a single source (one input point), but needs flexible deletion (like managing queues in priority order manually).
+
+### 💡 Visual:
+
+```plaintext
+Deque: [B, C, D]
+
+insertRear(E) → [B, C, D, E] ✅
+deleteFront() → [C, D, E] ✅
+deleteRear() → [C, D] ✅
+insertFront(A) → ❌ Not allowed
+```
+
+---
+
+## 2. 🔐 **Output Restricted Deque**
+
+### 🧠 Definition:
+- **Insertions allowed at both ends**
+- **Deletion allowed only at one end** (typically the **front**)
+
+### 📥 Operations:
+
+| Operation        | Allowed? |
+|------------------|----------|
+| `insertRear(x)`  | ✅ Yes   |
+| `insertFront(x)` | ✅ Yes   |
+| `deleteFront()`  | ✅ Yes   |
+| `deleteRear()`   | ❌ No    |
+
+### 📊 Use Case:
+Useful when you want to insert from multiple sources but process output in strict order (FIFO at front).
+
+### 💡 Visual:
+
+```plaintext
+Deque: [B, C, D]
+
+insertFront(A) → [A, B, C, D] ✅
+insertRear(E) → [A, B, C, D, E] ✅
+deleteFront() → [B, C, D, E] ✅
+deleteRear() → ❌ Not allowed
+```
+
+---
+
+## 🧠 Summary Table
+
+| Type                    | Insertion           | Deletion           | Use Case Example                  |
+|-------------------------|---------------------|---------------------|-----------------------------------|
+| Input Restricted Deque  | Only rear           | Both ends           | Task management with strict input |
+| Output Restricted Deque | Both ends           | Only front          | FIFO processing with flexible input |
+
+---
